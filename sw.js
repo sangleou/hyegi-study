@@ -1,5 +1,5 @@
 // 서비스워커 — 설치 때 전부 캐시해 두고, 이후엔 캐시 먼저(오프라인 동작)
-const C = "hyegi-0050eeaafa";
+const C = "hyegi-c53fb110c0";
 const FILES = ["./", "./index.html", "./manifest.json", "./icon-180.png", "./icon-192.png", "./icon-512.png"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(C).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
